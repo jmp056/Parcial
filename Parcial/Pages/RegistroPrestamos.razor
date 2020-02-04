@@ -2,9 +2,36 @@
 @using Parcial.Controllers;
 @using Parcial.Entidades;
 
+    <EditForm Model="@Prestamo" OnInvalidSubmit="@Guardar">
+        <DataAnnotationsValidator />
 
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <InputText @bind-Value="Prestamo.Nombre" class="form-control" />
+            <ValidationMessage For="@(() => Prestamo.Nombre)" />
+        </div>
 
-Welcome to your new app.
+        <div class="form-group">
+            <label for="Capital">Capital</label>
+            <InputNumber @bind-Value="Prestamo.Capital" class="form-control" />
+            <ValidationMessage For="@(() => Prestamo.Capital)" />
+        </div>
+
+        <div class="form-group">
+            <label for="Semanas">Semanas</label>
+            <InputNumber @bind-Value="Prestamo.Semanas" class="form-control" />
+            <ValidationMessage For="@(() => Prestamo.Semanas)" />
+        </div>
+
+        <div class="form-group">
+            <label for="Capital">Capital</label>
+            <InputNumber @bind-Value="Prestamo.Capital" class="form-control" />
+            <ValidationMessage For="@(() => Prestamo.Capital)" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+
+    </EditForm>
 
 
 @code{
@@ -16,4 +43,6 @@ Welcome to your new app.
         prestamosController.Guardar(Prestamo);
         this.Prestamo = new Prestamos();
     }
+
+
 }

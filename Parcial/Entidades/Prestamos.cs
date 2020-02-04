@@ -13,6 +13,7 @@ namespace Parcial.Entidades
         public string Nombre { get; set; }
         public float Capital { get; set; }
         public int Semanas { get; set; }
+        public float TotalAPagar { get; set; }
         public DateTime FechaPrestamo { get; set; }
 
         public Prestamos()
@@ -21,6 +22,7 @@ namespace Parcial.Entidades
             Nombre = string.Empty;
             Capital = 0;
             Semanas = 0;
+            TotalAPagar = 0;
             FechaPrestamo = DateTime.Now;
         }
     }
