@@ -12,4 +12,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DAL\" />
+    <Folder Include="Entidades\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
