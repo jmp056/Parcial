@@ -2,7 +2,7 @@
 @using Parcial.Controllers;
 @using Parcial.Entidades;
 
-    <EditForm Model="@Prestamo" OnInvalidSubmit="@Guardar">
+    <EditForm Model="@Prestamo" OnValidSubmit="@Guardar">
         <DataAnnotationsValidator />
 
         <div class="form-group">
@@ -29,11 +29,9 @@
             <ValidationMessage For="@(() => Prestamo.FechaPrestamo)" />
         </div>
 
-
-
-
-
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
 
     </EditForm>
 
@@ -44,6 +42,7 @@
 
     private void Guardar()
     {
+        Prestamo.TotalAPagar = Prestamo.Semanas * Prestamo.Capital;
         prestamosController.Guardar(Prestamo);
         this.Prestamo = new Prestamos();
     }
