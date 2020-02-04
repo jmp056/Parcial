@@ -1,0 +1,19 @@
+﻿@page "/"
+@using Parcial.Controllers;
+@using Parcial.Entidades;
+
+
+
+Welcome to your new app.
+
+
+@code{
+    Prestamos Prestamo = new Prestamos();
+    PrestamosController prestamosController = new PrestamosController();
+
+    private void Guardar()
+    {
+        prestamosController.Guardar(Prestamo);
+        this.Prestamo = new Prestamos();
+    }
+}
