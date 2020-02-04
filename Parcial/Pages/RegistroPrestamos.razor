@@ -7,27 +7,31 @@
 
         <div class="form-group">
             <label for="Nombre">Nombre</label>
-            <InputText @bind-Value="Prestamo.Nombre" class="form-control" />
+            <InputText @bind-Value="Prestamo.Nombre" class="form-control col-6" />
             <ValidationMessage For="@(() => Prestamo.Nombre)" />
         </div>
 
         <div class="form-group">
             <label for="Capital">Capital</label>
-            <InputNumber @bind-Value="Prestamo.Capital" class="form-control" />
+            <InputNumber @bind-Value="Prestamo.Capital" class="form-control col-6" />
             <ValidationMessage For="@(() => Prestamo.Capital)" />
         </div>
 
         <div class="form-group">
             <label for="Semanas">Semanas</label>
-            <InputNumber @bind-Value="Prestamo.Semanas" class="form-control" />
+            <InputNumber @bind-Value="Prestamo.Semanas" class="form-control col-6" />
             <ValidationMessage For="@(() => Prestamo.Semanas)" />
         </div>
 
         <div class="form-group">
-            <label for="Capital">Capital</label>
-            <InputNumber @bind-Value="Prestamo.Capital" class="form-control" />
-            <ValidationMessage For="@(() => Prestamo.Capital)" />
+            <label for="FechaDePrestamo">FechaDePrestamo</label>
+            <InputDate @bind-Value="Prestamo.FechaPrestamo" class="form-control col-6" />
+            <ValidationMessage For="@(() => Prestamo.FechaPrestamo)" />
         </div>
+
+
+
+
 
         <button type="submit" class="btn btn-primary">Guardar</button>
 
